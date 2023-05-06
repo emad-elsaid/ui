@@ -24,3 +24,16 @@ An immedia mode UI for Go.
 # When
 
 - Now it's a work in progress
+
+# How
+
+## Examples
+
+* The package provides runnable examples each is named after the widget function.
+* Examples will show widgets in a window
+* Clone the package or `go get` it to your system.
+* to run an example use. where `RoundedCorners` is the function name and `count=1` is to force running the example regardless of caching.
+
+```
+go test . -run RoundedCorners -count=1
+```
