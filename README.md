@@ -2,6 +2,10 @@
 
 An immedia mode UI for Go.
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/emad-elsaid/ui)](https://goreportcard.com/report/github.com/emad-elsaid/ui)
+[![GoDoc](https://godoc.org/github.com/emad-elsaid/ui?status.svg)](https://godoc.org/github.com/emad-elsaid/ui)
+
+
 
 # What
 
