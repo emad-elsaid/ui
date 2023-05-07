@@ -4,10 +4,12 @@ import (
 	"math"
 
 	"gioui.org/layout"
+	"gioui.org/widget"
 )
 
 type (
 	FlexChild = layout.FlexChild
+	Clickable = widget.Clickable
 )
 
 var (
