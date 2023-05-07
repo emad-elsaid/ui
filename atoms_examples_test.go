@@ -78,3 +78,33 @@ func ExampleBackground() {
 	exampleLoop(w)
 	// Output:
 }
+
+func ExampleHR() {
+	exampleLoop(
+		Inset1(
+			Rows(
+				Flexed(1, Text("Line 1")),
+				Flexed(1, HR(1)),
+				Flexed(1, Text("Line 2")),
+				Flexed(1, HR(2)),
+				Flexed(1, Text("Line 3")),
+			),
+		),
+	)
+	// Output:
+}
+
+func ExampleVR() {
+	exampleLoop(
+		Inset1(
+			Columns(
+				Flexed(1, Text("Line 1")),
+				Flexed(1, VR(1)),
+				Flexed(1, Text("Line 2")),
+				Flexed(1, VR(2)),
+				Flexed(1, Text("Line 3")),
+			),
+		),
+	)
+	// Output:
+}
