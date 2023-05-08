@@ -15,8 +15,9 @@ func exampleLoop(w W) {
 		switch e := e.(type) {
 		case system.FrameEvent:
 			c := layout.NewContext(&ops, e)
+			ops.Reset()
 			w(c)
-			e.Frame(c.Ops)
+			e.Frame(&ops)
 		case system.DestroyEvent:
 			return
 		}

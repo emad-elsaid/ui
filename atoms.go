@@ -16,7 +16,7 @@ func RoundedCorners(w W) W {
 		d := w(c)
 		macroOp := macro.Stop()
 
-		defer clip.UniformRRect(image.Rect(0, 0, d.Size.X, d.Size.Y), 5).Push(c.Ops).Pop()
+		defer clip.UniformRRect(image.Rect(0, 0, d.Size.X, d.Size.Y), Theme.BorderRadius).Push(c.Ops).Pop()
 		macroOp.Add(c.Ops)
 		return d
 	}

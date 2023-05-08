@@ -14,6 +14,7 @@ type ThemeStyle struct {
 	TextAlignment text.Alignment
 	TextColor     color.NRGBA
 	MaxLines      int
+	BorderRadius  int
 }
 
 var Theme = ThemeStyle{
@@ -23,6 +24,7 @@ var Theme = ThemeStyle{
 	TextAlignment: text.Start,
 	TextColor:     BLACK_500,
 	MaxLines:      0,
+	BorderRadius:  10,
 }
 
 func FontSize(s SP) Wrapper {
