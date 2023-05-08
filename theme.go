@@ -15,16 +15,44 @@ type ThemeStyle struct {
 	TextColor     color.NRGBA
 	MaxLines      int
 	BorderRadius  int
+
+	BackgroundColor    color.NRGBA
+	SecondaryTextColor color.NRGBA
+
+	DangerColor  color.NRGBA
+	SuccessColor color.NRGBA
+	WarningColor color.NRGBA
+
+	InputBgColor      color.NRGBA
+	ViewsBgColor      color.NRGBA
+	SidebarBgColor    color.NRGBA
+	BorderColor       color.NRGBA
+	ActiveBorderColor color.NRGBA
+	CardColor         color.NRGBA
+	CheckboxColor     color.NRGBA
 }
 
 var Theme = ThemeStyle{
-	FontSize:      13,
-	FontFamily:    fontShaper,
-	FontWeight:    font.Normal,
-	TextAlignment: text.Start,
-	TextColor:     BLACK_500,
-	MaxLines:      0,
-	BorderRadius:  10,
+	FontSize:           13,
+	FontFamily:         fontShaper,
+	FontWeight:         font.Normal,
+	TextAlignment:      text.Start,
+	TextColor:          BLACK_500,
+	MaxLines:           0,
+	BorderRadius:       10,
+	BackgroundColor:    WHITE,
+	SecondaryTextColor: SILVER_500,
+
+	DangerColor:       STRAWBERRY_500,
+	SuccessColor:      LIME_700,
+	WarningColor:      BANANA_900,
+	InputBgColor:      SILVER_100,
+	ViewsBgColor:      WHITE,
+	SidebarBgColor:    MixColor(SILVER_100, SILVER_300, 75),
+	BorderColor:       MixColor(SILVER_300, WHITE, 70),
+	ActiveBorderColor: SILVER_500,
+	CardColor:         MixColor(SILVER_100, SILVER_300, 75),
+	CheckboxColor:     ACCENT_COLOR_500,
 }
 
 func FontSize(s SP) Wrapper {

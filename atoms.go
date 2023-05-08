@@ -24,13 +24,13 @@ func RoundedCorners(w W) W {
 
 func Border(w W) W {
 	return func(c C) D {
-		return widget.Border{Color: BorderColor, Width: BorderSize, CornerRadius: 0}.Layout(c, w)
+		return widget.Border{Color: Theme.BorderColor, Width: BorderSize, CornerRadius: 0}.Layout(c, w)
 	}
 }
 
 func BorderActive(w W) W {
 	return func(c C) D {
-		return widget.Border{Color: ActiveBorderColor, Width: BorderSize, CornerRadius: 0}.Layout(c, w)
+		return widget.Border{Color: Theme.ActiveBorderColor, Width: BorderSize, CornerRadius: 0}.Layout(c, w)
 	}
 }
 
@@ -61,7 +61,7 @@ func HR(sz int) W {
 			Width: float32(sz),
 		}.Op().Push(c.Ops).Pop()
 
-		paint.Fill(c.Ops, BorderColor)
+		paint.Fill(c.Ops, Theme.BorderColor)
 
 		return D{Size: P{c.Constraints.Min.X, sz}}
 	}
@@ -79,7 +79,7 @@ func VR(sz int) W {
 			Width: float32(sz),
 		}.Op().Push(c.Ops).Pop()
 
-		paint.Fill(c.Ops, BorderColor)
+		paint.Fill(c.Ops, Theme.BorderColor)
 
 		return D{Size: P{sz, c.Constraints.Min.Y}}
 	}

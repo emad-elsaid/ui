@@ -20,7 +20,7 @@ func TextInput(editor *widget.Editor, hint string) W {
 		border = BorderActive
 	}
 
-	return Background(BackgroundColor,
+	return Background(Theme.BackgroundColor,
 		Wrap(
 			material.Editor(th, editor, hint).Layout,
 			border, Inset1,
@@ -43,8 +43,8 @@ func Button(clickable *Clickable, label string) W {
 }
 
 var (
-	IconCheckbox       = Inset05(Icon(icons.ToggleCheckBoxOutlineBlank, CheckboxColor))
-	IconCheckboxActive = Inset05(Icon(icons.ToggleCheckBox, CheckboxColor))
+	IconCheckbox       = Inset05(Icon(icons.ToggleCheckBoxOutlineBlank, Theme.CheckboxColor))
+	IconCheckboxActive = Inset05(Icon(icons.ToggleCheckBox, Theme.CheckboxColor))
 )
 
 func CheckboxBtn(value bool, btn *Clickable) W {

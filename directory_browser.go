@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	IconFolder = Icon(icons.FileFolderOpen, SecondaryTextColor)
-	IconFile   = Icon(icons.ActionDescription, SecondaryTextColor)
+	IconFolder = Icon(icons.FileFolderOpen, Theme.SecondaryTextColor)
+	IconFile   = Icon(icons.ActionDescription, Theme.SecondaryTextColor)
 	IconUp     = Icon(icons.NavigationArrowUpward, Theme.TextColor)
 )
 
@@ -94,7 +94,7 @@ func (d *DirectoryBrowser) Layout(dist *string) W {
 		}
 
 		if btn.Hovered() {
-			card = Background(BorderColor, card)
+			card = Background(Theme.BorderColor, card)
 		}
 
 		return Inset05(func(c C) D { return btn.Layout(c, card) })(c)

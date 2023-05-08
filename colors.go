@@ -112,22 +112,3 @@ var (
 	ACCENT_COLOR_900 = BLUEBERRY_900
 	ACCENT_COLOR     = MixColor(BLUEBERRY_300, BLUEBERRY_500, 25)
 )
-
-var (
-	BackgroundColor    = WHITE
-	SecondaryTextColor = SILVER_500
-
-	DangerColor  = STRAWBERRY_500
-	SuccessColor = LIME_700
-	WarningColor = BANANA_900
-
-	InputBgColor   = SILVER_100
-	ViewsBgColor   = WHITE
-	SidebarBgColor = MixColor(SILVER_100, SILVER_300, 75)
-
-	BorderColor       = MixColor(SILVER_300, WHITE, 70)
-	ActiveBorderColor = SILVER_500
-
-	CardColor     = SidebarBgColor
-	CheckboxColor = ACCENT_COLOR_500
-)

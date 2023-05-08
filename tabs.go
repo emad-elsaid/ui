@@ -58,7 +58,7 @@ func (l *Tabs) Layout(tabs ...*TabChild) W {
 func TabButton(cl *Clickable, active bool, l string) W {
 	var b W
 	if cl.Hovered() && !active {
-		b = Background(CardColor, Inset1(Label(l)))
+		b = Background(Theme.CardColor, Inset1(Label(l)))
 	} else if active {
 		b = Background(SelectedTabBgColor, Wrap(Label(l), Inset1, TextColor(SelectedTabFgColor)))
 	} else {
